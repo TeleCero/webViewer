@@ -5,8 +5,8 @@
 {% endblock %}
 {% block content %}
 <ul>
-  {%for file in files%}
-    <li><<a href="/get_file/{{file}}">{{files}}</a></li>
+  {% for fi in files %}
+    <li><<a href="/get_file/{{fi}}">{{fi}}</a></li>
   {%endfor%}
 </ul>
 {% endblock %}
