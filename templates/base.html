@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>{% block title %}{% endblock %}</title>
+<meta charset="utf-8" />
+</head>
+ 
+<body>
+    <nav>
+       {% block nav %}
+       {% endblock %}
+    </nav>
+    <header>
+      {% block header %}{% endblock %}
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  <footer>
+    {% block footer %}
+      &copy; Copyright 2023 <a href="https://naiel.me/">Naiel V</a>.
+      {% endblock %}
+  </footer>
+    
+</body>
+</html>
