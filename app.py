@@ -1,7 +1,7 @@
 from flask import Flask, render_template, send_from_directory
 import os
 
-UPLOAD_PATH = "./upload"
+UPLOAD_PATH = "../videos"
 VALID_FILES = ["mp4", "mov"]
 
 app = Flask(__name__)
@@ -16,7 +16,7 @@ def get_file(path: str):
 def index():
   fi = os.listdir(UPLOAD_PATH)
   files = [file for file in fi if file.split(".")[-1] in VALID_FILES]
-  return render_template('index.html', files)
+  return render_template('index.html', files=files)
 
 
 if __name__ == "__main__":
